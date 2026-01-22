@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { dummyShowsData } from '../../assets/assets';
 import Loading from '../../components/Loading';
-import Title from '../../components/admin/Title';
+import Title from '../../components/admin/Title.jsx';
 import { KConverter } from '../../lib/KConverter';
-import { CheckIcon, DeleteIcon } from 'lucide-react';
+import { CheckIcon, DeleteIcon, StarIcon } from 'lucide-react';
+import { useAppContext } from '../../context/AppContext';
+import toast from 'react-hot-toast';
 
 const AddShows = () => {
+
+  const {axios, getToken, user, image_base_url } = useAppContext()
 
   const currency = import.meta.env.VITE_CURRENCY_SYMBOL || '₹';
   const [nowPlayingMovies, setNowPlayingMovies] = useState([]);
@@ -14,8 +18,19 @@ const AddShows = () => {
   const [dateTimeInputs, setDateTimeInputs] = useState('');
   const [showPrice, setShowPrice] = useState('');
 
+  const [addingShow, setAddingShow] = useState(false);
+
   const fetchNowPlayingMovies = async () => {
-    setNowPlayingMovies(dummyShowsData)
+    try {
+      const { data } = await axios.get('/api/show/now-playing', {headers: {Authorization: `Bearer ${await getToken()}`}})
+
+      if(data.success){
+        setNowPlayingMovies(data.movies)
+      }
+    } catch (error) {
+      console.log('Error fetching movies:', error);
+      
+    }
   };
 
   const handleDateTimeAdd = () => {
@@ -51,9 +66,44 @@ const handleRemoveTime = (date, time) => {
   });
 };
 
+const handleSubmit = async () => {
+  try {
+    setAddingShow(true)
+
+    if(!selectedMovie || Object.keys(dateTimeSelection).length === 0 || !showPrice){
+      return toast('Please fill all the fields')
+    }
+
+    const showsInput = Object.entries(dateTimeSelection).map(([date, time])=> ({date, time}));
+    const payload = {
+      movieId: selectedMovie,
+      showsInput,
+      showPrice: Number(showPrice)
+    }
+
+    const { data } = await axios.post('/api/show/add', payload, {headers: {Authorization: `Bearer ${await getToken()}`}})
+
+    if(data.success){
+      toast.success(data.message)
+      setSelectedMovie(null)
+      setDateTimeSelection({})
+      setShowPrice('')
+      setDateTimeInputs('')
+    }else{
+      toast.error(data.message)
+    }
+  } catch (error) {
+    console.error('submission error:', error);
+    toast.error('Failed to add show. Please try again.')
+  }
+  setAddingShow(false)
+}
+
   useEffect(() => {
+    if(user){
     fetchNowPlayingMovies();
-  }, []);
+    }
+  }, [user]);
 
 
   return nowPlayingMovies.length > 0 ? (
@@ -65,7 +115,7 @@ const handleRemoveTime = (date, time) => {
           {nowPlayingMovies.map((movie) => (
             <div key={movie.id} className={`relative max-w-40 cursor-pointer group-hover:not-hover:opacity-40 hover:-translate-y-1 transition duration-300 `} onClick={() => setSelectedMovie(movie.id)}>
               <div className='relative rounded-lg overflow-hidden'>
-                <img src={movie.poster_path} alt='' className='w-full object-cover brightness-90' />
+                <img src={image_base_url + movie.poster_path} alt='' className='w-full object-cover brightness-90' />
 
                 <div className='text-sm flex items-center justify-between p-2 bg-black/70 w-full absolute bottom-0 left-0'>
                   <p className='
@@ -135,7 +185,7 @@ const handleRemoveTime = (date, time) => {
         </div>
       )}
 
-      <button className='bg-yellow-600 text-white px-8 py-2 mt-6 rounded hover:bg-yellow-600/90 transition-all cursor-pointer'>
+      <button onClick={handleSubmit} disabled={addingShow} className='bg-yellow-600 text-white px-8 py-2 mt-6 rounded hover:bg-yellow-600/90 transition-all cursor-pointer'>
         Add Movies
       </button>
     </>

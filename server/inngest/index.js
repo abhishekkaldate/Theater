@@ -12,7 +12,7 @@ const syncUserCreation = inngest.createFunction(
         const {id, first_name, last_name, email_addresses, image_url} = event.data
         const userData = {
             _id: id,
-            email: email_addresses[0].email_addresses,
+            email: email_addresses[0].email_address,
             name: first_name + ' ' + last_name,
             image: image_url
         }
@@ -35,20 +35,45 @@ const syncUserDeletion = inngest.createFunction(
 )
 
 //update user
+// const syncUserUpdation = inngest.createFunction(
+//     {id: 'update-user-from-clerk'},
+//     {event: 'clerk/user.updated'},
+//     async ({event})=>{
+//         const {id, first_name, last_name, email_addresses, image_url} = event.data
+//         const userData = {
+//             _id: id,
+//             email: email_addresses[0].email_address,
+//             name: first_name + ' ' + last_name,
+//             image: image_url
+//         }
+//         await User.findByIdAndUpdate(id, userData)
+//     }
+// )
+
 const syncUserUpdation = inngest.createFunction(
-    {id: 'update-user-from-clerk'},
-    {event: 'clerk/user.updated'},
-    async ({event})=>{
-        const {id, first_name, last_name, email_addresses, image_url} = event.data
-        const userData = {
-            _id: id,
-            email: email_addresses[0].email_addresses,
-            name: first_name + ' ' + last_name,
-            image: image_url
-        }
-        await User.findByIdAndUpdate(id, userData)
-    }
-)
+  { id: "update-user-from-clerk" },
+  { event: "clerk/user.updated" },
+  async ({ event }) => {
+
+    const {
+      id,
+      first_name,
+      last_name,
+      email_addresses,
+      image_url
+    } = event.data;
+
+    await User.findByIdAndUpdate(
+      id,
+      {
+        email: email_addresses[0].email_address,
+        name: `${first_name} ${last_name}`,
+        image: image_url
+      },
+      { new: true } // optional but recommended
+    );
+  }
+);
 
 // Create an empty array where we'll export future Inngest functions
 export const functions = [

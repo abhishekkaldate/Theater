@@ -68,8 +68,8 @@ export const dummyShowsData = [
         "id": 324544,
         "title": "The Darh Knight",
         "overview": "The Dark Knight is a 2008 superhero film directed by Christopher Nolan, starring Batman versus the Joker. It explores chaos, morality, and heroism, praised for Heath Ledger’s iconic performance, gripping storytelling, and realistic tone, with intense action and memorable dialogue.",
-        "poster_path": "https://img.youtube.com/vi/KyXWkoRlthY/maxresdefault.jpg",
-        "backdrop_path": "https://img.youtube.com/vi/KyXWkoRlthY/maxresdefault.jpg",
+        "poster_path": "https://image.tmdb.org/t/p/original/z53D72EAOxGRqdr7KXXWp9dJiDe.jpg",
+        "backdrop_path": "https://image.tmdb.org/t/p/original/1p5aI299YBnqrEEvVGJERk2MXXb.jpg",
         "genres": [
             { "id": 28, "name": "Action" },
             { "id": 14, "name": "Fantasy" },
@@ -88,8 +88,8 @@ export const dummyShowsData = [
         "id": 1232546,
         "title": "Oppenheimer",
         "overview": "Oppenheimer is a biographical thriller directed by Christopher Nolan. It follows physicist J. Robert Oppenheimer and his role in developing the atomic bomb, exploring science, power, morality, and the devastating consequences of nuclear weapons on humanity.",
-        "poster_path": "https://img.youtube.com/vi/vO2N0LGvhWc/maxresdefault.jpg",
-        "backdrop_path": "https://img.youtube.com/vi/vO2N0LGvhWc/maxresdefault.jpg",
+        "poster_path": "https://image.tmdb.org/t/p/original/z53D72EAOxGRqdr7KXXWp9dJiDe.jpg",
+        "backdrop_path": "https://image.tmdb.org/t/p/original/1p5aI299YBnqrEEvVGJERk2MXXb.jpg",
         "genres": [
             { "id": 27, "name": "Horror" },
             { "id": 9648, "name": "Mystery" }
@@ -107,8 +107,8 @@ export const dummyShowsData = [
         "id": 552524,
         "title": "Avatar",
         "overview": "Avatar is a science-fiction epic directed by James Cameron. Set on Pandora, it follows humans exploiting alien resources and a former Marine who bonds with the Na’vi, exploring environmentalism, identity, and conflict through groundbreaking visual effects.",
-        "poster_path": "https://img.youtube.com/vi/he1MrsDGMbc/maxresdefault.jpg",
-        "backdrop_path": "https://img.youtube.com/vi/he1MrsDGMbc/maxresdefault.jpg",
+        "poster_path": "https://image.tmdb.org/t/p/original/z53D72EAOxGRqdr7KXXWp9dJiDe.jpg",
+        "backdrop_path": "https://image.tmdb.org/t/p/original/1p5aI299YBnqrEEvVGJERk2MXXb.jpg",
         "genres": [
             { "id": 10751, "name": "Family" },
             { "id": 35, "name": "sci" },
@@ -127,8 +127,8 @@ export const dummyShowsData = [
         "id": 668489,
         "title": "Inception",
         "overview": "Inception is a science-fiction thriller directed by Christopher Nolan. It follows skilled thieves who enter dreams to steal or plant ideas, exploring reality, time, and the power of the subconscious through stunning visuals and a complex narrative.",
-        "poster_path": "https://img.youtube.com/vi/ArRqeBKBsEU/maxresdefault.jpg",
-        "backdrop_path": "https://img.youtube.com/vi/ArRqeBKBsEU/maxresdefault.jpg",
+        "poster_path": "https://image.tmdb.org/t/p/original/z53D72EAOxGRqdr7KXXWp9dJiDe.jpg",
+        "backdrop_path": "https://image.tmdb.org/t/p/original/1p5aI299YBnqrEEvVGJERk2MXXb.jpg",
         "genres": [
             { "id": 28, "name": "Action" },
             { "id": 80, "name": "Crime" },
@@ -147,8 +147,8 @@ export const dummyShowsData = [
         "id": 950387,
         "title": "Interstellar",
         "overview": "Interstellar is a science-fiction epic directed by Christopher Nolan. It follows astronauts traveling through a wormhole to save humanity, blending space exploration, time dilation, emotional storytelling, and scientific realism with breathtaking visuals and a powerful musical score.",
-        "poster_path": "https://img.youtube.com/vi/l2EqVahDON4/maxresdefault.jpg",
-        "backdrop_path": "https://img.youtube.com/vi/l2EqVahDON4/maxresdefault.jpg",
+        "poster_path": "https://image.tmdb.org/t/p/original/z53D72EAOxGRqdr7KXXWp9dJiDe.jpg",
+        "backdrop_path": "https://image.tmdb.org/t/p/original/1p5aI299YBnqrEEvVGJERk2MXXb.jpg",
         "genres": [
             { "id": 10751, "name": "Family" },
             { "id": 35, "name": "sci" },
