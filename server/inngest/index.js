@@ -1,3 +1,5 @@
+import Booking from "../models/Booking.js";
+import Show from "../models/Show.js";
 import User from "../models/User.js"; // adjust path
 import { Inngest } from "inngest";
 
@@ -35,49 +37,77 @@ const syncUserDeletion = inngest.createFunction(
 )
 
 //update user
-// const syncUserUpdation = inngest.createFunction(
-//     {id: 'update-user-from-clerk'},
-//     {event: 'clerk/user.updated'},
-//     async ({event})=>{
-//         const {id, first_name, last_name, email_addresses, image_url} = event.data
-//         const userData = {
-//             _id: id,
-//             email: email_addresses[0].email_address,
-//             name: first_name + ' ' + last_name,
-//             image: image_url
-//         }
-//         await User.findByIdAndUpdate(id, userData)
-//     }
-// )
-
 const syncUserUpdation = inngest.createFunction(
-  { id: "update-user-from-clerk" },
-  { event: "clerk/user.updated" },
-  async ({ event }) => {
+    {id: 'update-user-from-clerk'},
+    {event: 'clerk/user.updated'},
+    async ({event})=>{
+        const {id, first_name, last_name, email_addresses, image_url} = event.data
+        const userData = {
+            _id: id,
+            email: email_addresses[0].email_address,
+            name: first_name + ' ' + last_name,
+            image: image_url
+        }
+        await User.findByIdAndUpdate(id, userData)
+    }
+)
 
-    const {
-      id,
-      first_name,
-      last_name,
-      email_addresses,
-      image_url
-    } = event.data;
+//inngest
+const releaseSeatsAndDeleteBooking = inngest.createFunction(
+  {id: 'release-seats-and-delete-booking'},
+  {event: "app/checkpayment"},
+  async ({ event, step }) =>{
+    const tenMinutesLater = new Date(Date.now() + 10 * 60 * 1000);
+    await step.sleepUntil('wait-for-10-minutes', tenMinutesLater);
 
-    await User.findByIdAndUpdate(
-      id,
-      {
-        email: email_addresses[0].email_address,
-        name: `${first_name} ${last_name}`,
-        image: image_url
-      },
-      { new: true } // optional but recommended
-    );
+    await step.run('check-payment-status', async ()=>{
+      const bookingId = event.data.bookingId;
+      const booking = await Booking.findById(bookingId)
+
+      //payment not done
+      if(!booking.isPaid){
+        const show = await Show.findById(booking.show);
+        booking.bookedSeats.forEach(()=>{
+          delete show.occupiedSeats[seat]
+        });
+        show.markModified('occupiedSeats');
+        await show.save();
+        await Booking.findByIdAndDelete(booking._id);
+      }
+    })
   }
-);
+)
+
+
+// const syncUserUpdation = inngest.createFunction(
+//   { id: "update-user-from-clerk" },
+//   { event: "clerk/user.updated" },
+//   async ({ event }) => {
+
+//     const {
+//       id,
+//       first_name,
+//       last_name,
+//       email_addresses,
+//       image_url
+//     } = event.data;
+
+//     await User.findByIdAndUpdate(
+//       id,
+//       {
+//         email: email_addresses[0].email_address,
+//         name: `${first_name} ${last_name}`,
+//         image: image_url
+//       },
+//       { new: true } // optional but recommended
+//     );
+//   }
+// );
 
 // Create an empty array where we'll export future Inngest functions
 export const functions = [
     syncUserCreation,
     syncUserDeletion,
-    syncUserUpdation
+    syncUserUpdation,
+    releaseSeatsAndDeleteBooking
 ];
