@@ -24,9 +24,9 @@ const imageUrl =
   className="rounded-lg h-52 w-full object-cover"
 />
 
-    {/* <img onClick={()=>{navigate(`/movies/${movie._id}`); scrollTo(0,0)}}
+    <img onClick={()=>{navigate(`/movies/${movie._id}`); scrollTo(0,0)}}
     src={image_base_url + movie.backdrop_path} alt={movie.title}
-      className='rounded-lg h-52 w-full object-cover object-right cursor-pointer'/> */}
+      className='rounded-lg h-52 w-full object-cover object-right cursor-pointer'/>
 
       <p className='font-semibold mt-2 truncate'>{movie.title}</p>
 
@@ -46,7 +46,7 @@ const imageUrl =
           {typeof movie.vote_average === "number"
   ? movie.vote_average.toFixed(1)
   : "N/A"}
-          {/* {movie.vote_average?.toFixed(1)} */}
+          {movie.vote_average?.toFixed(1)}
         </p>
       </div>
 

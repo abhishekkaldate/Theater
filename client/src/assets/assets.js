@@ -4,11 +4,6 @@ import googlePlay from './googlePlay.svg'
 import appStore from './appStore.svg'
 import screenImage from './screenImage.svg'
 import profile from './profile.png'
-import joker1 from './joker1.jpg'
-import movie from './movie.png'
-import wblogo from './wblogo.png'
-import abhi2 from './abhi2.png'
-
 
 export const assets = {
     logo,
@@ -16,60 +11,56 @@ export const assets = {
     googlePlay,
     appStore,
     screenImage,
-    profile,
-    joker1,
-    movie,
-    wblogo,
-    abhi2
+    profile
 }
 
 export const dummyTrailers = [
     {
-        image: "https://img.youtube.com/vi/zAGVQLHvwOY/maxresdefault.jpg",
-        videoUrl: 'https://youtu.be/zAGVQLHvwOY?t=11'
+        image: "https://img.youtube.com/vi/WpW36ldAqnM/maxresdefault.jpg",
+        videoUrl: 'https://www.youtube.com/watch?v=WpW36ldAqnM'
     },
     {
-        image: "https://img.youtube.com/vi/b9V3Pj47x4c/maxresdefault.jpg",
+        image: "https://img.youtube.com/vi/-sAOWhvheK8/maxresdefault.jpg",
         videoUrl: 'https://www.youtube.com/watch?v=-sAOWhvheK8'
     },
     {
-        image: "https://img.youtube.com/vi/NLOp_6uPccQ/maxresdefault.jpg",
+        image: "https://img.youtube.com/vi/1pHDWnXmK7Y/maxresdefault.jpg",
         videoUrl: 'https://www.youtube.com/watch?v=1pHDWnXmK7Y'
     },
     {
-        image: "https://img.youtube.com/vi/yngKXEBALE0/maxresdefault.jpg",
-        videoUrl: 'https://youtu.be/yngKXEBALE0?si=ny4GkSnm0mUpbn5f'
+        image: "https://img.youtube.com/vi/umiKiW4En9g/maxresdefault.jpg",
+        videoUrl: 'https://www.youtube.com/watch?v=umiKiW4En9g'
     },
 ]
 
 const dummyCastsData = [
-    { "name": "Abhi Kaldate", "profile_path": "https://i.ibb.co/20h25qmx/abhi2.png", },
-    { "name": "Abhi Kaldate", "profile_path": "https://i.ibb.co/20h25qmx/abhi2.png", },
-    { "name": "Abhi Kaldate", "profile_path": "https://i.ibb.co/20h25qmx/abhi2.png", },
-    { "name": "Abhi Kaldate", "profile_path": "https://i.ibb.co/20h25qmx/abhi2.png", },
-    { "name": "Abhi Kaldate", "profile_path": "https://i.ibb.co/20h25qmx/abhi2.png", },
-    { "name": "Abhi Kaldate", "profile_path": "https://i.ibb.co/20h25qmx/abhi2.png", },
-    { "name": "Abhi Kaldate", "profile_path": "https://i.ibb.co/20h25qmx/abhi2.png", },
-    { "name": "Abhi Kaldate", "profile_path": "https://i.ibb.co/20h25qmx/abhi2.png", },
-    { "name": "Abhi Kaldate", "profile_path": "https://i.ibb.co/20h25qmx/abhi2.png", },
-    { "name": "Abhi Kaldate", "profile_path": "https://i.ibb.co/20h25qmx/abhi2.png", },
-    { "name": "Abhi Kaldate", "profile_path": "https://i.ibb.co/20h25qmx/abhi2.png", },
-    { "name": "Abhi Kaldate", "profile_path": "https://i.ibb.co/20h25qmx/abhi2.png", },
-    { "name": "Abhi Kaldate", "profile_path": "https://i.ibb.co/20h25qmx/abhi2.png", },
-    { "name": "Abhi Kaldate", "profile_path": "https://i.ibb.co/20h25qmx/abhi2.png", },
-    { "name": "Abhi Kaldate", "profile_path": "https://i.ibb.co/20h25qmx/abhi2.png", },
-    { "name": "Abhi Kaldate", "profile_path": "https://i.ibb.co/20h25qmx/abhi2.png", },
-    { "name": "Abhi Kaldate", "profile_path": "https://i.ibb.co/20h25qmx/abhi2.png", }
+    { "name": "Milla Jovovich", "profile_path": "https://image.tmdb.org/t/p/original/usWnHCzbADijULREZYSJ0qfM00y.jpg", },
+    { "name": "Dave Bautista", "profile_path": "https://image.tmdb.org/t/p/original/snk6JiXOOoRjPtHU5VMoy6qbd32.jpg", },
+    { "name": "Arly Jover", "profile_path": "https://image.tmdb.org/t/p/original/zmznPrQ9GSZwcOIUT0c3GyETwrP.jpg", },
+    { "name": "Amara Okereke", "profile_path": "https://image.tmdb.org/t/p/original/nTSPtzWu6deZTJtWXHUpACVznY4.jpg", },
+    { "name": "Fraser James", "profile_path": "https://image.tmdb.org/t/p/original/mGAPQG2OKTgdKFkp9YpvCSqcbgY.jpg", },
+    { "name": "Deirdre Mullins", "profile_path": "https://image.tmdb.org/t/p/original/lJm89neuiVlYISEqNpGZA5kTAnP.jpg", },
+    { "name": "Sebastian Stankiewicz", "profile_path": "https://image.tmdb.org/t/p/original/hLN0Ca09KwQOFLZLPIEzgTIbqqg.jpg", },
+    { "name": "Tue Lunding", "profile_path": "https://image.tmdb.org/t/p/original/qY4W0zfGBYzlCyCC0QDJS1Muoa0.jpg", },
+    { "name": "Jacek Dzisiewicz", "profile_path": "https://image.tmdb.org/t/p/original/6Ksb8ANhhoWWGnlM6O1qrySd7e1.jpg", },
+    { "name": "Ian Hanmore", "profile_path": "https://image.tmdb.org/t/p/original/yhI4MK5atavKBD9wiJtaO1say1p.jpg", },
+    { "name": "Eveline Hall", "profile_path": "https://image.tmdb.org/t/p/original/uPq4xUPiJIMW5rXF9AT0GrRqgJY.jpg", },
+    { "name": "Kamila Klamut", "profile_path": "https://image.tmdb.org/t/p/original/usWnHCzbADijULREZYSJ0qfM00y.jpg", },
+    { "name": "Caoilinn Springall", "profile_path": "https://image.tmdb.org/t/p/original/uZNtbPHowlBYo74U1qlTaRlrdiY.jpg", },
+    { "name": "Jan Kowalewski", "profile_path": "https://image.tmdb.org/t/p/original/snk6JiXOOoRjPtHU5VMoy6qbd32.jpg", },
+    { "name": "Pawel Wysocki", "profile_path": "https://image.tmdb.org/t/p/original/zmznPrQ9GSZwcOIUT0c3GyETwrP.jpg", },
+    { "name": "Simon Lööf", "profile_path": "https://image.tmdb.org/t/p/original/cbZrB8crWlLEDjVUoak8Liak6s.jpg", },
+    { "name": "Tomasz Cymerman", "profile_path": "https://image.tmdb.org/t/p/original/nTSPtzWu6deZTJtWXHUpACVznY4.jpg", }
 ]
 
 export const dummyShowsData = [
     {
         "_id": "324544",
         "id": 324544,
-        "title": "The Darh Knight",
-        "overview": "The Dark Knight is a 2008 superhero film directed by Christopher Nolan, starring Batman versus the Joker. It explores chaos, morality, and heroism, praised for Heath Ledger’s iconic performance, gripping storytelling, and realistic tone, with intense action and memorable dialogue.",
-        "poster_path": "https://image.tmdb.org/t/p/original/z53D72EAOxGRqdr7KXXWp9dJiDe.jpg",
-        "backdrop_path": "https://image.tmdb.org/t/p/original/1p5aI299YBnqrEEvVGJERk2MXXb.jpg",
+        "title": "In the Lost Lands",
+        "overview": "A queen sends the powerful and feared sorceress Gray Alys to the ghostly wilderness of the Lost Lands in search of a magical power, where she and her guide, the drifter Boyce, must outwit and outfight both man and demon.",
+        "poster_path": "https://image.tmdb.org/t/p/original/dDlfjR7gllmr8HTeN6rfrYhTdwX.jpg",
+        "backdrop_path": "https://image.tmdb.org/t/p/original/op3qmNhvwEvyT7UFyPbIfQmKriB.jpg",
         "genres": [
             { "id": 28, "name": "Action" },
             { "id": 14, "name": "Fantasy" },
@@ -79,17 +70,17 @@ export const dummyShowsData = [
         "release_date": "2025-02-27",
         "original_language": "en",
         "tagline": "She seeks the power to free her people.",
-        "vote_average": 9.4,
+        "vote_average": 6.4,
         "vote_count": 15000,
         "runtime": 102,
     },
     {
         "_id": "1232546",
         "id": 1232546,
-        "title": "Oppenheimer",
-        "overview": "Oppenheimer is a biographical thriller directed by Christopher Nolan. It follows physicist J. Robert Oppenheimer and his role in developing the atomic bomb, exploring science, power, morality, and the devastating consequences of nuclear weapons on humanity.",
-        "poster_path": "https://image.tmdb.org/t/p/original/z53D72EAOxGRqdr7KXXWp9dJiDe.jpg",
-        "backdrop_path": "https://image.tmdb.org/t/p/original/1p5aI299YBnqrEEvVGJERk2MXXb.jpg",
+        "title": "Until Dawn",
+        "overview": "One year after her sister Melanie mysteriously disappeared, Clover and her friends head into the remote valley where she vanished in search of answers. Exploring an abandoned visitor center, they find themselves stalked by a masked killer and horrifically murdered one by one...only to wake up and find themselves back at the beginning of the same evening.",
+        "poster_path": "https://image.tmdb.org/t/p/original/juA4IWO52Fecx8lhAsxmDgy3M3.jpg",
+        "backdrop_path": "https://image.tmdb.org/t/p/original/icFWIk1KfkWLZnugZAJEDauNZ94.jpg",
         "genres": [
             { "id": 27, "name": "Horror" },
             { "id": 9648, "name": "Mystery" }
@@ -105,13 +96,13 @@ export const dummyShowsData = [
     {
         "_id": "552524",
         "id": 552524,
-        "title": "Avatar",
-        "overview": "Avatar is a science-fiction epic directed by James Cameron. Set on Pandora, it follows humans exploiting alien resources and a former Marine who bonds with the Na’vi, exploring environmentalism, identity, and conflict through groundbreaking visual effects.",
-        "poster_path": "https://image.tmdb.org/t/p/original/z53D72EAOxGRqdr7KXXWp9dJiDe.jpg",
-        "backdrop_path": "https://image.tmdb.org/t/p/original/1p5aI299YBnqrEEvVGJERk2MXXb.jpg",
+        "title": "Lilo & Stitch",
+        "overview": "The wildly funny and touching story of a lonely Hawaiian girl and the fugitive alien who helps to mend her broken family.",
+        "poster_path": "https://image.tmdb.org/t/p/original/mKKqV23MQ0uakJS8OCE2TfV5jNS.jpg",
+        "backdrop_path": "https://image.tmdb.org/t/p/original/7Zx3wDG5bBtcfk8lcnCWDOLM4Y4.jpg",
         "genres": [
             { "id": 10751, "name": "Family" },
-            { "id": 35, "name": "sci" },
+            { "id": 35, "name": "Comedy" },
             { "id": 878, "name": "Science Fiction" }
         ],
         "casts": dummyCastsData,
@@ -125,10 +116,10 @@ export const dummyShowsData = [
     {
         "_id": "668489",
         "id": 668489,
-        "title": "Inception",
-        "overview": "Inception is a science-fiction thriller directed by Christopher Nolan. It follows skilled thieves who enter dreams to steal or plant ideas, exploring reality, time, and the power of the subconscious through stunning visuals and a complex narrative.",
-        "poster_path": "https://image.tmdb.org/t/p/original/z53D72EAOxGRqdr7KXXWp9dJiDe.jpg",
-        "backdrop_path": "https://image.tmdb.org/t/p/original/1p5aI299YBnqrEEvVGJERk2MXXb.jpg",
+        "title": "Havoc",
+        "overview": "When a drug heist swerves lethally out of control, a jaded cop fights his way through a corrupt city's criminal underworld to save a politician's son.",
+        "poster_path": "https://image.tmdb.org/t/p/original/ubP2OsF3GlfqYPvXyLw9d78djGX.jpg",
+        "backdrop_path": "https://image.tmdb.org/t/p/original/65MVgDa6YjSdqzh7YOA04mYkioo.jpg",
         "genres": [
             { "id": 28, "name": "Action" },
             { "id": 80, "name": "Crime" },
@@ -145,13 +136,13 @@ export const dummyShowsData = [
     {
         "_id": "950387",
         "id": 950387,
-        "title": "Interstellar",
-        "overview": "Interstellar is a science-fiction epic directed by Christopher Nolan. It follows astronauts traveling through a wormhole to save humanity, blending space exploration, time dilation, emotional storytelling, and scientific realism with breathtaking visuals and a powerful musical score.",
-        "poster_path": "https://image.tmdb.org/t/p/original/z53D72EAOxGRqdr7KXXWp9dJiDe.jpg",
-        "backdrop_path": "https://image.tmdb.org/t/p/original/1p5aI299YBnqrEEvVGJERk2MXXb.jpg",
+        "title": "A Minecraft Movie",
+        "overview": "Four misfits find themselves struggling with ordinary problems when they are suddenly pulled through a mysterious portal into the Overworld: a bizarre, cubic wonderland that thrives on imagination. To get back home, they'll have to master this world while embarking on a magical quest with an unexpected, expert crafter, Steve.",
+        "poster_path": "https://image.tmdb.org/t/p/original/yFHHfHcUgGAxziP1C3lLt0q2T4s.jpg",
+        "backdrop_path": "https://image.tmdb.org/t/p/original/2Nti3gYAX513wvhp8IiLL6ZDyOm.jpg",
         "genres": [
             { "id": 10751, "name": "Family" },
-            { "id": 35, "name": "sci" },
+            { "id": 35, "name": "Comedy" },
             { "id": 12, "name": "Adventure" },
             { "id": 14, "name": "Fantasy" }
         ],
@@ -186,7 +177,7 @@ export const dummyShowsData = [
     {
         "_id": "986056",
         "id": 986056,
-        "title": "Thunderbolts",
+        "title": "Thunderbolts*",
         "overview": "After finding themselves ensnared in a death trap, seven disillusioned castoffs must embark on a dangerous mission that will force them to confront the darkest corners of their pasts.",
         "poster_path": "https://image.tmdb.org/t/p/original/m9EtP1Yrzv6v7dMaC9mRaGhd1um.jpg",
         "backdrop_path": "https://image.tmdb.org/t/p/original/rthMuZfFv4fqEU4JVbgSW9wQ8rs.jpg",
@@ -302,7 +293,7 @@ export const dummyDashboardData = {
 export const dummyBookingData = [
     {
         "_id": "68396334fb83252d82e17295",
-        "user": { "name": "Abhishek", },
+        "user": { "name": "GreatStack", },
         "show": {
             _id: "68352363e96d99513e4221a4",
             movie: dummyShowsData[0],
@@ -315,7 +306,7 @@ export const dummyBookingData = [
     },
     {
         "_id": "68396334fb83252d82e17295",
-        "user": { "name": "Abhishek", },
+        "user": { "name": "GreatStack", },
         "show": {
             _id: "68352363e96d99513e4221a4",
             movie: dummyShowsData[0],
@@ -328,7 +319,7 @@ export const dummyBookingData = [
     },
     {
         "_id": "68396334fb83252d82e17295",
-        "user": { "name": "Abhishek", },
+        "user": { "name": "GreatStack", },
         "show": {
             _id: "68352363e96d99513e4221a4",
             movie: dummyShowsData[0],
