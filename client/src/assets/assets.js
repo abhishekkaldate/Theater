@@ -16,20 +16,20 @@ export const assets = {
 
 export const dummyTrailers = [
     {
-        image: "https://img.youtube.com/vi/WpW36ldAqnM/maxresdefault.jpg",
-        videoUrl: 'https://www.youtube.com/watch?v=WpW36ldAqnM'
-    },
+        image: "https://img.youtube.com/vi/1clWprLC5Ak/maxresdefault.jpg",
+        videoUrl: 'https://youtu.be/1clWprLC5Ak?si=CPTUoa0WYKHGlmNe'
+    }, 
     {
         image: "https://img.youtube.com/vi/-sAOWhvheK8/maxresdefault.jpg",
-        videoUrl: 'https://www.youtube.com/watch?v=-sAOWhvheK8'
+        videoUrl: 'https://youtu.be/kH1XlwHQv9o?si=Ov9Qj2nYVC2Is4_0'
     },
     {
-        image: "https://img.youtube.com/vi/1pHDWnXmK7Y/maxresdefault.jpg",
-        videoUrl: 'https://www.youtube.com/watch?v=1pHDWnXmK7Y'
+        image: "https://img.youtube.com/vi/bA24GlsL6mM/maxresdefault.jpg",
+        videoUrl: 'https://youtu.be/mqqft2x_Aa4?si=VIEPu4TyMbZr67KP'
     },
     {
-        image: "https://img.youtube.com/vi/umiKiW4En9g/maxresdefault.jpg",
-        videoUrl: 'https://www.youtube.com/watch?v=umiKiW4En9g'
+        image: "https://img.youtube.com/vi/jane6C4rIwc/hqdefault.jpg",
+        videoUrl: 'https://youtu.be/votcOf5cYCM?si=ma0sewUD5Ib9hV8d'
     },
 ]
 
