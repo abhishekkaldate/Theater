@@ -147,7 +147,7 @@ const TrailerSection = () => {
 
   return (
     <section className="px-6 md:px-16 lg:px-24 xl:px-44 py-20">
-      <p className="text-gray-300 font-medium text-lg text-center mb-6">
+      <p className="text-gray-100 font-medium text-lg text-center mb-6">
         Trailer
       </p>
 

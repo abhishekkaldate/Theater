@@ -16,7 +16,7 @@ const imageUrl =
       : "/no-image.png";
 
   return (
-    <div className='flex flex-col justify-between p-3 bg-gray-600 rounded-2xl hover:-translate-y-1 transition duration-300 w-66'>
+    <div className='flex flex-col justify-between p-3 bg-gray-800 rounded-2xl hover:-translate-y-1 transition duration-300 w-66'>
 
 <img
   src={imageUrl}
@@ -46,7 +46,7 @@ const imageUrl =
           {typeof movie.vote_average === "number"
   ? movie.vote_average.toFixed(1)
   : "N/A"}
-          {movie.vote_average?.toFixed(1)}
+          {/* {movie.vote_average?.toFixed(1)} */}
         </p>
       </div>
 

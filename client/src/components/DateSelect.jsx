@@ -30,7 +30,7 @@ const onBookHandler = ()=> {
               <span className='grid grid-cols-3 md:flex flex-wrap md:max-w-lg gap-4'>
                 {Object.keys(dateTime).map((date)=> (
                     <button onClick={()=> setSelected(date)} key={date}
-                     className={`flex flex-col items-center justify-center h-14 w-14 aspect-square rounded cursor-pointer ${selected === date ? 'bg-amber-300' : 'bg-gray-800 hover:bg-gray-700 text-gray-300'}`}>
+                     className={`flex flex-col items-center justify-center h-14 w-14 aspect-square rounded cursor-pointer ${selected === date ? 'bg-amber-300' : 'bg-amber-300 hover:bg-amber-700 text-gray-100'}`}>
                         <span>{new Date(date).getDate()}</span>
                         <span>{new Date(date).toLocaleDateString('en-US', { month: 'short' })}</span>
                     </button>
@@ -39,7 +39,7 @@ const onBookHandler = ()=> {
               <ChevronLastIcon  width={28}/>
             </div>
         </div>
-        <button onClick={onBookHandler} className='px-8 py-2 mt-6  hover:bg-amber-300 rounded transition-all cursor-pointer'>
+        <button onClick={onBookHandler} className='px-8 py-2 mt-6 bg-amber-600 hover:bg-amber-300 rounded transition-all cursor-pointer'>
           Book Ticket</button>
       </div>
     </div>

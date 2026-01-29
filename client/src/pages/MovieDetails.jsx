@@ -59,7 +59,7 @@ useEffect(()=>{
         <p className='text-gray-300'>English/Hindi</p>
         <h1 className='text-4xl font-semibold max-w-96 text-balance'>{show.movie.title}</h1>
         <div className='flex items-center gap-2 text-gray-300'>
-          <StarIcon className='w-5 h-5 text-yellow-300 fill-amber-300'/>
+          <StarIcon className='w-5 h-5 text-red-500 fill-red-600'/>
           {show.movie.vote_average.toFixed(1)} User Rating
         </div>
 
@@ -103,7 +103,7 @@ useEffect(()=>{
           ))}
         </div>
         <div className='flex justify-center mt-20'>
-          <button onClick={()=> {navigate('/movies'); scrollTo(0,0)}} className='px-8 py-2 bg-gray-800 hover:bg-amber-300-dull transition rounded-md font-medium cursor-pointer active:scale-95'>View More</button>
+          <button onClick={()=> {navigate('/movies'); scrollTo(0,0)}} className='px-8 py-2 bg-amber-600 hover:bg-amber-300-dull transition rounded-md font-medium cursor-pointer active:scale-95'>View More</button>
         </div>
 
     </div>

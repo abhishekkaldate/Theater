@@ -118,7 +118,7 @@ const SeatLayout = () => {
 
 
           {show.dateTime?.[date].map((item) => (
-            <div key={item.time} onClick={() => setSelectedTime(item)} className={`flex items-center gap-2 px-6 py-2 w-max rounded-r-md cursor-pointer transition ${selectedTime?.time === item.time ? 'bg-amber-300-dull text-yellow-200 font-medium' : 'hover:bg-gray-700'}`}>
+            <div key={item.time} onClick={() => setSelectedTime(item)} className={`flex items-center gap-2 px-6 py-2 w-max rounded-r-md cursor-pointer transition ${selectedTime?.time === item.time ? 'bg-amber-300-dull text-amber-600 font-medium' : 'hover:bg-gray-600'}`}>
               <ClockIcon className='w-4 h-4' />
               <p className='text-sm'>{isoTimeFormat(item.time)}</p>
             </div>
@@ -148,7 +148,7 @@ const SeatLayout = () => {
         </div>
         </div>
 
-            <button onClick={bookTickets} className='flex items-center gap-1 mt-20 px-10 py-3 text-sm bg-gray-600 hover:bg-amber-200 transition rounded-full font-medium cursor-pointer active:scale-95'>
+            <button onClick={bookTickets} className='flex items-center gap-1 mt-20 px-10 py-3 text-sm bg-amber-600 hover:bg-amber-200 transition rounded-full font-medium cursor-pointer active:scale-95'>
               Confirm & Pay
               <ArrowRightIcon strokeWidth={3} className='w-4 h-4'/>
             </button>
